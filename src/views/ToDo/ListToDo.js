@@ -82,7 +82,7 @@ class ListTodo extends React.Component {
                             return (
                                 <div className="todo-child" key={item.id}>
                                     {
-                                        // khi chưa nhấn edit thì nó edittodo 
+                                        //  khi chưa nhấn edit thì nó edittodo 
                                         // vẫn còn null thì ta vẫn render ra list như bth còn nếu nó not null thì ta render ra input
                                         isEmtyObj === true ?
                                             <span>{index + 1} - {item.title}</span>
