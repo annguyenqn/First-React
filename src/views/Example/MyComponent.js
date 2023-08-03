@@ -8,21 +8,17 @@ import AddcComponent from "./AddComponent"
 */
 class MyComponent extends React.Component {
     state = {
-        name: "",
         arrjob: [
             { id: 'abcjob1', title: 'dev', salary: '500' },
             { id: 'abcjob2', title: 'tes', salary: '300' },
             { id: 'abcjob3', title: 'ba', salary: '600' }
-
         ]
     }
     addNewJob = (job) => {
         this.setState({
             arrjob: [...this.state.arrjob, job]
         })
-
     }
-
     render() {
         // let name = 'An'
         return (
@@ -31,13 +27,18 @@ class MyComponent extends React.Component {
                     addNewJob={this.addNewJob} />
                 <br></br>
                 <ChildComponent
-                    name={this.state.name}
-                    age={'25'}
                     arrjob={this.state.arrjob}
+                    deleteJob={this.deleteJob}
                 />
-
             </>
         )
+    }
+    deleteJob = (jobItem) => {
+        let currentJobs = this.state.arrjob
+        currentJobs = currentJobs.filter(item => item.id !== jobItem.id)
+        this.setState({
+            arrjob: currentJobs
+        })
     }
 }
 

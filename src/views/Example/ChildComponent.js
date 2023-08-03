@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Demo.css'
 
 /*
   JSX : tra ve duy nhat 1 phan tu html
@@ -15,6 +15,10 @@ class ChildComponent extends React.Component {
         })
 
     }
+    handleOnclickDelete = (jobItem) => {
+        console.log('handle delete', jobItem)
+        this.props.deleteJob(jobItem)
+    }
     render() {
         let newarr = ''
         let { arrjob } = this.props
@@ -27,7 +31,7 @@ class ChildComponent extends React.Component {
                 {/* dấu && nếu showjob = true thì sẽ in vế sau của && */}
                 {showjobs === false ?
                     <div>
-                        <button onClick={() => this.handleShowHide()}>Show</button>
+                        <button className="btn-show" onClick={() => this.handleShowHide()}>Show</button>
                     </div>
                     :
                     <>
@@ -36,10 +40,10 @@ class ChildComponent extends React.Component {
                                 newarr = arrjob.map((item, index) => {
                                     return (
                                         <div key={item.id}>
-                                            {item.title} - {item.salary}
+                                            {item.title} - {item.salary} <></>
+                                            <span onClick={() => this.handleOnclickDelete(item)}>X</span>
                                         </div>
                                     )
-
                                 })
                             }
                             {console.log('ch2eck props:', newarr)}

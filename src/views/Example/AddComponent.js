@@ -16,7 +16,6 @@ class AddComponent extends React.Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log('check data input: ', this.state)
         this.props.addNewJob(
             {
                 id: Math.floor(Math.random() * 1000),
@@ -30,9 +29,7 @@ class AddComponent extends React.Component {
         })
     }
     render() {
-
         return (
-
             <div>
                 <form>
                     <label>Title: </label>
@@ -57,5 +54,6 @@ class AddComponent extends React.Component {
             </div>
         )
     }
+
 }
 export default AddComponent
