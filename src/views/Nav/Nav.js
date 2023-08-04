@@ -4,17 +4,17 @@ import {
     NavLink, Link,
     BrowserRouter
 } from "react-router-dom";
-class Nav extends React.Component {
-    render() {
-        return (
-            <>
-                <div class="topnav">
-                    <NavLink class="active" to="/" exact={true}>Home</NavLink>
-                    <NavLink to="/mycom">My Component</NavLink>
-                    <NavLink to="/Todo">To Do</NavLink>
-                </div>
-            </>
-        )
-    }
+const Nav = () => {
+    return (
+        <>
+            <div class="topnav">
+                <NavLink class="active" to="/" exact={true}>Home</NavLink>
+                <NavLink to="/mycom">Class Com</NavLink>
+                <NavLink to="/Todo">Crud Class Com</NavLink>
+                <NavLink to="/hookcom">HookCom</NavLink>
+
+            </div>
+        </>
+    )
 }
 export default Nav
