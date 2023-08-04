@@ -7,7 +7,6 @@ import Nav from './Nav/Nav';
 // 2 components : class component / funtion component( funtion , arrow)
 import MyComponent from './Example/MyComponent';
 import ListToDo from './ToDo/ListToDo'
-import Welcome from './Example/MyComponent'
 import Home from './Example/Home';
 import {
   BrowserRouter as Router,
@@ -16,6 +15,7 @@ import {
   Link,
   BrowserRouter
 } from "react-router-dom";
+import HookCom from './HookComponent/HookCom';
 function App() {
   return (
     <BrowserRouter>
@@ -26,6 +26,7 @@ function App() {
           <Routes>
             <Route exact path='/mycom' element={<MyComponent></MyComponent>} />
             <Route exact path='/Todo' element={<ListToDo></ListToDo>} />
+            <Route exact path='/hookcom' element={<HookCom />} />
             <Route exact path='/' element={<Home></Home>} />
           </Routes>
           {/* <MyComponent></MyComponent> */}
