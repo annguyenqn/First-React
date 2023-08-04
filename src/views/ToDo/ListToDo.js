@@ -107,7 +107,6 @@ class ListTodo extends React.Component {
                                                 <button onClick={() => this.handleCacle()}>Cancle</button>
                                             </>
                                             : 'Edit'
-
                                         } */}
                                     </button>
                                     {isEmtyObj === false && editTodo.id === item.id ?
