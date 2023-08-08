@@ -1,7 +1,6 @@
 import { useState } from "react"
 import { toast } from 'react-toastify';
-
-import AddHook from "./AddHook"
+import AddHook from "./AddHook";
 const HookCom = () => {
     let [toDos, setToDo] = useState([
         {

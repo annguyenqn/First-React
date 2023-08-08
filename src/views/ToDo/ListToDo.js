@@ -56,7 +56,6 @@ class ListTodo extends React.Component {
         this.setState({
             editTodo: {}
         })
-
     }
     handleOnchaneEdit = (e) => {
         let editTodoCopy = { ...this.state.editTodo }
@@ -65,7 +64,6 @@ class ListTodo extends React.Component {
             editTodo: editTodoCopy
         })
         toast.success("Update Success")
-
     }
     render() {
         let { ListTodos, editTodo } = this.state
@@ -82,6 +80,7 @@ class ListTodo extends React.Component {
                             return (
                                 <div className="todo-child" key={item.id}>
                                     {
+
                                         //  khi chưa nhấn edit thì nó edittodo 
                                         // vẫn còn null thì ta vẫn render ra list như bth còn nếu nó not null thì ta render ra input
                                         isEmtyObj === true ?
