@@ -9,7 +9,7 @@ const AddHook = () => {
     }
     return (
         <>
-            <input value={''} type="text" onChange={(e) => { handleInput(e) }} />
+            <input className="caret-black" value={''} type="text" onChange={(e) => { handleInput(e) }} />
             <button onClick={(e) => handleOnclickme(e)}>Sumbit</button>
 
         </>

@@ -12,6 +12,11 @@ const Nav = () => {
                 <NavLink to="/mycom">Class Com</NavLink>
                 <NavLink to="/Todo">Crud ClassCom</NavLink>
                 <NavLink to="/hookcom">Crud HookCom</NavLink>
+                <NavLink to="/Flex">Learning Flex Box</NavLink>
+                <NavLink to="/redux">Learning Redux</NavLink>
+                <NavLink to="/TodoHook">Login</NavLink>
+                <NavLink to="/ListUser">List User</NavLink>
+                <NavLink to="/ReactHook">React Hook</NavLink>
             </div>
         </>
     )
