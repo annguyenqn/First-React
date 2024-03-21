@@ -13,6 +13,11 @@ import Redux from './Redux/Redux';
 import Todo from './HookComponent/Todo';
 import ListUser from './HookComponent/ListUser';
 import ReactHook from './HookComponent/ReactHook';
+import ArrMethod from './HookComponent/ArrMethod';
+import SetStructure from './HookComponent/SetStructure'
+import MapStructure from './HookComponent/MapStructure';
+import TaskManager from './HookComponent/TaskManager';
+import FetchData from './HookComponent/fetchData'
 import {
   BrowserRouter as Router,
   Route,
@@ -38,6 +43,11 @@ function App() {
           <Route exact path='/TodoHook' element={<Todo></Todo>} />
           <Route exact path='/ListUser' element={<ListUser></ListUser>} />
           <Route exact path='/ReactHook' element={<ReactHook></ReactHook>} />
+          <Route exact path='/ArrMethod' element={<ArrMethod></ArrMethod>} />
+          <Route exact path='/SetStructure' element={<SetStructure></SetStructure>} />
+          {/* <Route exact path='/MapStructure' element={<TaskManager></TaskManager>} /> */}
+          <Route exact path='/FetchData' element={<FetchData></FetchData>} />
+
 
 
         </Routes>

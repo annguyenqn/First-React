@@ -1,86 +1,34 @@
-import React, { useState } from "react";
-// const gifts = ['xe', 'bong', 'maybay', 'babay'];
-// const cars = [
-//     {
-//         id: 0,
-//         name: 'BMW'
-//     },
-//     {
-//         id: 1,
-//         name: 'MERC'
-//     },
-//     {
-//         id: 2,
-//         name: 'VINFAST'
-//     },
-// ]
+import React, { useState } from 'react';
 
+function ReactHook() {
+    const [count, setCount] = useState(0);
+    const [increaseClicks, setIncreaseClicks] = useState(0);
+    const [decreaseClicks, setDecreaseClicks] = useState(0);
 
-const ReactHook = () => {
-    //random gift
-    // const [gift, setGift] = useState();
-    // const giftChange = () => {
-    //     const index = Math.floor(Math.random() * gifts.length);
-    //     setGift(gifts[index]);
+    const increase = () => {
+        setIncreaseClicks(increaseClicks + 1);
+        setCount(count + 1);
+    };
 
-    // }
-
-    //----------------LAY DATA RADIO INPUT Binding-------------
-    // const [checked, setChecked] = useState([]);
-    // const handleRegister = () => {
-    //     console.log('this is id car', checked);
-    // }
-    // const handleOnchange = (id) => {
-    //     setChecked(prev => {
-    //         //Nếu id có trong mảng checked thì biến ischecked == true;
-    //         const isChecked = checked.includes(id)
-    //         if (isChecked) {
-    //             //dùng filter trả ra các kết quả mà id khác item trong mảng checked.
-    //             return checked.filter(item => item !== id);
-    //         } else {
-    //             return [...prev, id];
-    //         }
-    //     })
-    // }
-    // ----------------TodoList-------------------------------------
-
+    const decrease = () => {
+        setDecreaseClicks(decreaseClicks + 1);
+        setCount(count - 1);
+    };
     return (
-        <>
-            {/* <h1>{gift || 'Chưa có phần thưởng'}</h1>
-            <button onClick={giftChange}>Lấy thưởng</button> */}
-            {/* -----------binding 2 chieu----------- */}
-            {/* <div>
-                {
-                    cars.map((item, index) => {
-                        return (
-                            <>
-                                <div key={item.id}>
-
-                                    radio
-                                     <input
-                                        type="radio"
-                                        checked={car === item.id}
-                                        onChange={() => setCar(item.id)}
-                                    ></input>
-                                    <input
-                                        type="checkbox"
-                                        checked={checked.includes(item.id)}
-                                        onChange={() => handleOnchange(item.id)}
-                                    ></input>
-                                    {item.name}
-                                </div>
-                            </>
-                        )
-                    })
-                }
-                <button onClick={handleRegister}> Register</button>
-
-            </div> */}
-            {/* ---------------TodoList------------------- */}
-
-
-
-        </>
-    )
+        <div className=' h-[500px] flex justify-center items-center '>
+            <div className='flex items-center flex-col bg-gray-300 h-52 gap-10 rounded-lg  '>
+                <div className='text-3xl pt-3 w-32'><p>Count: {count}</p></div>
+                <div className='flex gap-5  px-5 '>
+                    <div> <p>Number of Increase clicks: {increaseClicks}</p></div>
+                    <div><p>Number of Decrease clicks: {decreaseClicks}</p></div>
+                </div>
+                <div className='flex gap-5 pb-5'>
+                    <button className='bg-cyan-200 h-10 w-20 rounded-lg hover:bg-cyan-500' onClick={increase}>Increase</button>
+                    <button className='bg-red-200 h-10 w-20 rounded-lg hover:bg-red-500' onClick={decrease}>Decrease</button>
+                </div>
+            </div>
+        </div>
+    );
 }
-export default ReactHook
+
+export default ReactHook;

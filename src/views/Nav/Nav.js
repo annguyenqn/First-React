@@ -7,16 +7,24 @@ import {
 const Nav = () => {
     return (
         <>
-            <div class="topnav">
-                <NavLink class="active" to="/" exact={true}>Home</NavLink>
-                <NavLink to="/mycom">Class Com</NavLink>
+            <div className="topnav">
+                {/* <NavLink className="active" to="/" exact={'true'}>Home</NavLink> */}
+                {/* <NavLink to="/mycom">Class Com</NavLink>
                 <NavLink to="/Todo">Crud ClassCom</NavLink>
                 <NavLink to="/hookcom">Crud HookCom</NavLink>
                 <NavLink to="/Flex">Learning Flex Box</NavLink>
                 <NavLink to="/redux">Learning Redux</NavLink>
                 <NavLink to="/TodoHook">Login</NavLink>
-                <NavLink to="/ListUser">List User</NavLink>
+                <NavLink to="/ListUser">List User</NavLink> */}
                 <NavLink to="/ReactHook">React Hook</NavLink>
+                <NavLink to="/ArrMethod">Arr Method</NavLink>
+                <NavLink to="/SetStructure">Set Structure</NavLink>
+                {/* <NavLink to="/MapStructure">Map Structure</NavLink> */}
+                <NavLink to="/FetchData">Fetch Data</NavLink>
+
+
+
+
             </div>
         </>
     )
